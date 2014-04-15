@@ -1,0 +1,33 @@
+{
+  "name": "grunt-multicore",
+  "version": "0.1.0",
+  "description": "Divide Grunt tasks evenly across multiple cores",
+  "keywords": [
+    "gruntplugin",
+    "multicore",
+    "parallel",
+    "simultaneous",
+    "optimize",
+    "speed"
+  ],
+  "author": {
+    "name": "Hunter Trujillo",
+    "email": "hunter@infocraft.org",
+    "url": "http://infocraft.org"
+  },
+  "repository": "cryptoquick/grunt-multicore",
+  "dependencies": {
+    "cint": "^5.0.2",
+    "async": "^0.7.0",
+    "pad-stdio": "^0.1.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "licenses": {
+    "type": "MIT"
+  }
+}
