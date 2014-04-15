@@ -57,9 +57,9 @@ grunt.loadNpmTasks('grunt-multicore');
 grunt.registerTask('default', ['assemble', 'multicore:assemble']);
 ```
 
-The 'assemble-config' module is just shown as an example Node.js module that might be written to generate data such as this:
+The "assemble-config" module is just shown as an example Node.js module that might be written to generate data such as this:
 
-['assemble:sales', 'assemble:events', 'assemble:directory', 'assemble:articles', 'assemble:articles-0001', ...],
+`['assemble:sales', 'assemble:events', 'assemble:directory', 'assemble:articles', 'assemble:articles-0001', ...]`
 
 ## Options
 
