@@ -1,6 +1,6 @@
 # grunt-multicore
 
-> Divide grunt tasks to run across multiple cores
+> Divide Grunt tasks to run across multiple cores
 
 This is particularly helpful for Grunt users who auto-generate their task targets using a static configuration generation module. If one is using, for example, [Assemble](http://assemble.io/), and they are configuring a task for each individual page, and if they have a site of sufficient size, and one doesn't care the order in which those task targets are called, with grunt-multicore they can split hundreds or thousands of auto-generated Assemble tasks over several cores, as illustrated in the screenshot below:
 
@@ -8,7 +8,7 @@ This is particularly helpful for Grunt users who auto-generate their task target
 
 ## Rationale
 
-This task was forked from grunt-concurrent. What it does differently is that it chunks up a particular task across the specified number of cores. grunt-concurrent, if (mis)configured, attempt to spawn a process per individual task, and execute those in-order, causing a massive delay in processing time. :crying_cat_face: Even worse, grunt-parallel will attempt to spawn each process at once, virtually fork-bombing the developer's system, causing it to either hang or behave in strange ways, and ultimately resulting in a restart. :scream_cat: The packages do have their uses for smaller number of parallel processes, but ultimately, the rationale for the new package is for those who wish to run a great deal of task targets on the all or some of the CPUs on that system. If used correctly, this should result in a dramatic reduction in the time necessary to execute Grunt. :smirk_cat:
+This task was forked from [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent). What it does differently is that it chunks up a particular task across the specified number of cores. grunt-concurrent, if (mis)configured, attempt to spawn a process per individual task, and execute those in-order, causing a massive delay in processing time. :crying_cat_face: Even worse, [grunt-parallel](https://github.com/iammerrick/grunt-parallel) will attempt to spawn each process at once, virtually fork-bombing the developer's system, causing it to either hang or behave in strange ways, and ultimately resulting in a restart. :scream_cat: The packages do have their uses for smaller number of parallel processes, but ultimately, the rationale for the new package is for those who wish to run a great deal of task targets on the all or some of the CPUs on that system. If used correctly, this should result in a dramatic reduction in the time necessary to execute Grunt. :smirk_cat:
 
 Admittedly, the terminal output is rather ugly, as a quick & dirty method to communicate between processes was implemented.
 
@@ -16,7 +16,7 @@ Admittedly, the terminal output is rather ugly, as a quick & dirty method to com
 
 ## Getting Started
 
-If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
+If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use Grunt plugins. Once you're familiar with that process, install this plugin with this command:
 
 ```bash
 $ npm install grunt-multicore --save-dev
@@ -31,7 +31,7 @@ grunt.loadNpmTasks('grunt-multicore');
 *Tip: the [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) module makes it easier to load multiple grunt tasks.*
 
 
-[grunt]: http://gruntjs.com
+[Grunt]: http://gruntjs.com
 [Getting Started]: https://github.com/gruntjs/grunt/wiki/Getting-started
 
 
