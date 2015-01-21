@@ -47,9 +47,11 @@ For those using [Assemble](http://assemble.io/), one can find themselves creatin
 var assembleTasks = require('assemble-config')(grunt, sites);
 
 grunt.initConfig({
-	assemble: assembleTasks,
+	taskname:
+		files: [taskfiles],
 	multicore: {
-		assemble: assembleTasks
+		taskname:
+			files: [taskfiles]
 	}
 });
 
@@ -65,19 +67,20 @@ The "assemble-config" module is just shown as an example Node.js module that mig
 
 ### limit
 
-Type: `Number`  
+Type: `Number`
 Default: Number of logical CPU cores, with a minimum of 2
 
 Limit of how many cores are utilized.
 
 ### log
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `false`
 
 ## Release History
 
- * 2014-04-14   v0.1.0   First release.
+ * 2014-04-14   v0.1.0  First release.
+ * 2015-01-21 	v0.2.0	Altered scope of project. No longer accepts a live object, but instead spawns tasks for files.
 
 ## License
 
